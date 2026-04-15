@@ -1,12 +1,9 @@
-import Github from "lucide-react/dist/esm/icons/github"
-import Linkedin from "lucide-react/dist/esm/icons/linkedin"
-import Twitter from "lucide-react/dist/esm/icons/twitter"
-import ArrowUp from "lucide-react/dist/esm/icons/arrow-up"
-import Zap from "lucide-react/dist/esm/icons/zap"
+import React from 'react';
+import { Github, Linkedin, Twitter, ArrowUp, Zap } from "lucide-react";
 
-export function Footer() {
-  const currentYear = new Date().getFullYear()
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" })
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <footer className="py-24 px-6 lg:px-8 bg-slate-950 border-t border-slate-900 relative overflow-hidden text-white">
@@ -28,15 +25,15 @@ export function Footer() {
           <div className="space-y-8">
             <h6 className="text-[10px] font-black uppercase tracking-[0.5em] text-blue-500">Connect</h6>
             <div className="flex flex-wrap gap-5">
-                <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500">
+                <a href="#" className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500 transition-all">
                     <Github className="h-6 w-6" />
-                </div>
-                <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500">
+                </a>
+                <a href="#" className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500 transition-all">
                     <Linkedin className="h-6 w-6" />
-                </div>
-                <div className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500">
+                </a>
+                <a href="#" className="p-4 bg-slate-900 border border-slate-800 rounded-2xl text-slate-500 hover:text-blue-500 transition-all">
                     <Twitter className="h-6 w-6" />
-                </div>
+                </a>
             </div>
           </div>
         </div>
@@ -53,5 +50,7 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
+
+export default Footer;

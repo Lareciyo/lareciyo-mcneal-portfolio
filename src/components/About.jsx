@@ -1,4 +1,5 @@
-import { ShieldCheck, Zap, Code2, Layers } from "lucide-react"
+import React from 'react';
+import { ShieldCheck, Zap, Code2, Layers } from "lucide-react";
 
 const experiences = [
   { 
@@ -25,9 +26,9 @@ const experiences = [
     stack: ["Vue.js", "Shopify", "GraphQL", "Tailwind"],
     icon: <Code2 className="h-6 w-6" />
   }
-]
+];
 
-export function About() {
+const About = () => {
   return (
     <section id="about" className="relative py-24 sm:py-40 px-6 lg:px-8 bg-slate-950">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-32">
@@ -110,5 +111,7 @@ export function About() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default About;
