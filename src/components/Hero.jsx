@@ -1,10 +1,11 @@
-import * as Icons from "lucide-react"
-// Ensure your image is named profile.png and sits in the src folder!
-import myImage from "../profile.png" 
+import React from 'react';
+import { Sparkles } from "lucide-react";
+// We use the new assets folder path we created
+import myImage from "../assets/profile.png"; 
 
-export function Hero() {
+const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 lg:px-8 bg-slate-950 overflow-hidden text-white">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-center px-6 lg:px-8 bg-slate-950 overflow-hidden text-white">
       {/* Background Mesh */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
@@ -34,7 +35,7 @@ export function Hero() {
                 </span>
               </h1>
               <div className="flex items-center gap-3 text-slate-400">
-                <Icons.Sparkles className="h-5 w-5 text-blue-500" />
+                <Sparkles className="h-5 w-5 text-blue-500" />
                 <h2 className="text-2xl font-bold tracking-tight uppercase">Software Architect</h2>
               </div>
             </div>
@@ -73,5 +74,7 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Hero;
